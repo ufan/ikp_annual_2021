@@ -6,6 +6,7 @@
 \usepackage{paralist}
 \usepackage{times,mathptm}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{caption}
 \usepackage{subfig}
 \usepackage{gensymb}
@@ -41,38 +42,86 @@ background detererioates the elastic peak identification at small recoil angles 
 The forward detector, which is made from fast scintillators, has been built and
 commissioned in 2019 to help supressing the low energy background based on TOF-E
 relation of the recoil protons.
-The design of the forward detector has been veried and energy spectrums from pure elastic scattering events can now be obtained after the TOF-E selection.
+The design of the forward detector has been veried in the following test runs and energy spectrums from pure elastic scattering events can now be obtained after the TOF-E selection.
 Due to the lower limit of the acceptance of the forward detector, the spectrums
 of strips at very small recoil angles start to lose some events from the
 target body beyond a threshold angle.
 However, it is found that this phenomenon appears at a larger recoil angle than the design goal.
 This is caused by the unexpected large thickness of the cluster target along the beam axis.
+Thus, it's important to get more accurate information about the target profile.
 In this report, a new method of determining the density profile of the cluster
-target in KOALA is described, and the result from the 2019 beam test is
-presented.
+target in KOALA is described, and the result from the 2019 beam test is presented.
 The implication of measured target profile on the lower limit of KOALA measurement range is also discussed.
 
-
-neglected at very small recoil angles and the elastic energy spectrum is deterioated by the density distribution of the target profile.
-Thus, an accurate information about the target density distribution is needed to exact
-the elastic peak correctly.
-A method for the determination of the cluster target density profile from the
-test beam data is developped for this purpose.
 \par
 \medskip
 
 %%%%% Description of the method
-The number of elastic events $N_{evt}$ recorded in the experiment follows the
-equation $N_{evt} =
-l_{beam}\cdot\rho_{target}\cdot\sigma_{elastic}\cdot\epsilon_{acceptance}\cdot\epsilon_{detection}$,
-where $l_{beam}$ is beam intensity, $\rho_{target}$ is the target density,
-$\sigma_{elastic}$ is the cross section of elastic scattering,
-$\epsilon_{acceptance}$ and $\epsilon_{detection}$ are the detector acceptance
-and the combined
-detection efficiency of the detectors and DAQ.
-$l_{beam}$ and $\epsilon_{detection}$ are constant parameters in the same run.
-To determine the target density, a reference in which $\sigma_{elasitc}$ and
-$\epsilon_{acceptance}$ are both invariate is needed.
+The target thickness can be ignored at large recoil angles, since the strips are
+far away from the interaction point.
+This assumption does not hold for strips located close to the interaction point.
+Three scenerios are depicted in Fig. \ref{fig:target_density_determination} to
+show the variation of the measured energy spectrums with respect to smaller
+recoil angles.
+The acceptance of the forward detector covers the fully target body in the
+beginning (Fig. \ref{fig:target_density_determination} (1)), it gradually losts part of the target body
+(Fig. \ref{fig:target_density_determination} (2)), then the peak, and finally only covers
+the tail of the target body (Fig. \ref{fig:target_density_determination} (3)).
+In the end, it losts the target body completely and only measures the residual
+gas contribution.
+\begin{figure*}[h!]
+  \centering
+	\includegraphics[width=0.8\textwidth]{./target_density_determination.png}
+  \caption{Three scenerios showing the variation of recorded elastic energy
+    spectrums measured by three strips at different recoil angles: (1) the full
+    target body is within the acceptance of the
+    forward detector; (2) part of the target body is not within the
+    acceptance, but target center is still covered; (3) the target center is out of the
+    acceptance, only the tail of the target profile is recorded. The first row
+    shows the target profile shape and the second row is the measured energy
+    spectrum at each recoil angle. The blue bar indicates the region covered by
+    the forward detector and the red dot indicates the reference energy bin and
+    its corresponding position in the target profile.}
+  \label{fig:target_density_determination}
+\end{figure*}
+
+The number of TOF-E selected elastic scattering events $N_{elastic}$ recorded on a single recoil strip has the
+following relation with other experiment parameters,
+\begin{equation}
+  N_{elastic} = \epsilon_{DAQ}\cdot l_{beam}\cdot\rho_{target}\cdot\sigma_{elastic}\cdot\epsilon_{acceptance}
+\end{equation}
+where $\epsilon_{DAQ}$ is the DAQ efficiency, $l_{beam}$ is the beam intensity, $\rho_{target}$ is the target density,
+$\sigma_{elastic}$ is the cross section of elastic scattering and
+$\epsilon_{acceptance}$ is the acceptance of the forward detector.
+$l_{beam}$ and $\epsilon_{DAQ}$ are constant in the same run.
+To determine $\rho_{target}$, the last two items $\sigma_{elastic}$ and
+$\epsilon_{acceptance}$ need to be fixed.
+$\sigma_{elasitc}$ is determined by the energy of the recoil proton, thus can be
+fixed by choosing the same energy value as reference.
+$\epsilon_{acceptance}$ varies with the recoil angle as well as the beam size.
+Simulation shows that strips at the lower range of the forward coverage are
+guaranteed to be fully covered as long as the width of the beam profile is
+smaller than \SI{10}{mm}, see Fig. \ref{fig:fwd_acceptance}.
+Since the strip corresponds to a specific recoil angle which in turn
+can be converted to an energy value, this indicates that the elastic events with recoil energy close to the lower
+limit of the forward detector's acceptance range are guaranteed to be fully covered and has $\epsilon_{acceptance} = 1$.
+Thus, the event number in the energy bins close to the edge of the energy
+spectrum changes only with $\rho_{target}$ and can be used directly as the relative measurement of the target density.
+Since the reference energy can be converted back to a fixed position in front of the
+strip center, the position distribution of the target profile along the beam axis is
+determined by recording the event counts of the same energy bin in all strips.
+This process is also shown in Fig.\ref{fig:target_density_determination}, where \SI{120}{keV} with bin width of \SI{10}{keV} is selected as the reference.
+\begin{figure}[htb!]
+  \centering
+	\includegraphics[width=0.5\textwidth]{./fwd_acceptance.png}
+  \caption{Acceptance of the forward detector from the simulation using a square
+    beam with \SI{10}{\mm} width. The blue blocks are the hit map on the forward
+    detector plane for events hitting the recoil sensors. The red square indicates
+    the size of the forward scintillators.}
+  \label{fig:fwd_acceptance}
+\end{figure}
+
+
 % The event count in the same energy bin close to the lower edge of the forward
 % fully-covered region is selected as the reference for the density determination.
 Fig. \ref{fig:spectrums} shows the elastic energy spectrums recorded by different strips of Si1 at beam momentum \SI{2.2}{\momentum}.
@@ -92,11 +141,8 @@ before Si1\_18 and they measures the target profile before the peak density; 2) 
 peak gradually shows up on strips after Si1\_18 and they measures the profile
 after the peak density.
 
-\begin{figure}[!htb]
-	\includegraphics[width=0.5\textwidth]{./spectrums_aggregate.png}
-  	\caption{Key steps, important classes and the data flow in \textbf{unpack} package}
-  	\label{fig:unpack_design}
-\end{figure}
+\par
+\medskip
 
 %%%%% Results of the method
 Two independent methods can be used to determine the position distribution of the density profile.
@@ -113,6 +159,13 @@ slice against the target profile peak.
 This method is limited by the coverage of the elastic and only gives the density distribution after the target peak.
 The comparison between these two results is used to align the the recoil
 detector to the target center.
+\begin{figure}[htbp]
+  \centering
+	\includegraphics[width=0.35\textwidth]{./target_density_result.png}
+  \caption{Acceptance of the forward detector. a \SI{10}{\mm} square beam size.}
+  \label{fig:target_density_result}
+\end{figure}
+
 \par
 \medskip
 
@@ -138,9 +191,7 @@ This opens the possibility of extending the range of measurable $|t|$ to a lower
 
 %----------------------------------------------------------------
 \begin{thebibliography}{99}
-\bibitem{r1} \url{https://github.com/FairRootGroup/FairRoot}
 \bibitem{r2} Y. Zhou, H. Xu, IKP Annual Report 2018
-\bibitem{r3} K. H. Watzlawik et al. IEEE Transactions on Nuclear Science 43 (1996): 44
 \bibitem{r4} \url{https://root.cern.ch}
 \end{thebibliography}
 \end{document}
