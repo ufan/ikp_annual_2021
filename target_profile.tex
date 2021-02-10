@@ -7,6 +7,7 @@
 \usepackage{times,mathptm}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{stfloats}
 \usepackage{caption}
 \usepackage{subfig}
 \usepackage{gensymb}
@@ -53,6 +54,20 @@ In this report, a new method of determining the density profile of the cluster
 target in KOALA is described, and the result from the 2019 beam test is presented.
 The implication of measured target profile on the lower limit of KOALA measurement range is also discussed.
 
+\begin{figure*}[b]
+  \centering
+	\includegraphics[width=0.85\textwidth]{./target_density_determination.png}
+  \caption{Variation of elastic energy spectrums measured by three strips at different recoil angles: (1) the full target body is within the acceptance of the
+  forward detector; (2) part of the target body is not within the
+  acceptance, but target center is still covered; (3) the target center is out of the
+  acceptance, only the tail of the target profile is recorded. The first row
+  shows the target profile shape and the second row shows the energy
+  spectrum. The blue bar indicates the region covered by
+  the forward detector and the red dot indicates the reference energy bin and
+  its corresponding position in the target profile.}
+  \label{fig:target_density_determination}
+\end{figure*}
+
 \par
 \medskip
 
@@ -69,21 +84,9 @@ beginning (Fig. \ref{fig:target_density_determination} (1)), it gradually losts 
 the tail of the target body (Fig. \ref{fig:target_density_determination} (3)).
 In the end, it losts the target body completely and only measures the residual
 gas contribution.
-\begin{figure*}[h!]
-  \centering
-	\includegraphics[width=0.8\textwidth]{./target_density_determination.png}
-  \caption{Three scenerios showing the variation of recorded elastic energy
-    spectrums measured by three strips at different recoil angles: (1) the full
-    target body is within the acceptance of the
-    forward detector; (2) part of the target body is not within the
-    acceptance, but target center is still covered; (3) the target center is out of the
-    acceptance, only the tail of the target profile is recorded. The first row
-    shows the target profile shape and the second row is the measured energy
-    spectrum at each recoil angle. The blue bar indicates the region covered by
-    the forward detector and the red dot indicates the reference energy bin and
-    its corresponding position in the target profile.}
-  \label{fig:target_density_determination}
-\end{figure*}
+
+\par
+\medskip
 
 The number of TOF-E selected elastic scattering events $N_{elastic}$ recorded on a single recoil strip has the
 following relation with other experiment parameters,
@@ -101,18 +104,13 @@ fixed by choosing the same energy value as reference.
 $\epsilon_{acceptance}$ varies with the recoil angle as well as the beam size.
 Simulation shows that strips at the lower range of the forward coverage are
 guaranteed to be fully covered as long as the width of the beam profile is
-smaller than \SI{10}{mm}, see Fig. \ref{fig:fwd_acceptance}.
-Since the strip corresponds to a specific recoil angle which in turn
-can be converted to an energy value, this indicates that the elastic events with recoil energy close to the lower
-limit of the forward detector's acceptance range are guaranteed to be fully covered and has $\epsilon_{acceptance} = 1$.
-Thus, the event number in the energy bins close to the edge of the energy
-spectrum changes only with $\rho_{target}$ and can be used directly as the relative measurement of the target density.
-For \SI{2.2}{\momentum} run data, the observed lower limit of the forward
-acceptance is about \SI{100}{\keV}.
-The value is consistent with the calculated range of the forward detector's
-acceptance with ideal beam condition, which is from \SIrange{0.096}{1.56}{\MeV}.
-Thus, \SI{120}{keV} with bin width of \SI{10}{\keV} is selected at the
-measurement reference.
+smaller than \SI{10}{\mm}, see Fig. \ref{fig:fwd_acceptance}.
+The estimated width of the beam profile of COSY is about \SI{7}{\mm}.
+Since each strip corresponds to a specific recoil angle which in turn
+can be converted to an energy value, this indicates that the elastic events with
+energy near the edge the TOF-E selected energy spectrum are guaranteed to be
+fully covered and have $\epsilon_{acceptance} = 1$.
+Thus, the event counts in these bins are used directly as the relative measurement of the target density.
 \begin{figure}[htb!]
   \centering
 	\includegraphics[width=0.5\textwidth]{./fwd_acceptance.png}
@@ -123,13 +121,26 @@ measurement reference.
   \label{fig:fwd_acceptance}
 \end{figure}
 
-\par
-\medskip
-
-The target density profile along the beam axis is measured by recording the event counts of the same energy bin in all strips.
+For \SI{2.2}{\momentum} run data, the observed lower limit of the forward
+acceptance is about \SI{100}{\keV}, as shown in Fig. \ref{fig:spectrums}.
+The value is consistent with the calculated range of the forward detector's
+acceptance with ideal beam condition, which is from \SIrange{0.096}{1.56}{\MeV}.
+Thus, \SI{120}{keV} with bin width of \SI{10}{\keV} is selected at the
+measurement reference.
+\begin{figure}[htb!]
+  \centering
+	\includegraphics[width=0.4\textwidth]{./spectrums.png}
+  \caption{A collection of spectrums from strips which only cover the tail of
+    the target body. The lower limit can be clearly identified.}
+  \label{fig:spectrums}
+\end{figure}
+The target density distribution along the beam axis is obtained by recording the event counts of the same energy bin in all strips.
 The reference energy is converted back to a position before the strip center
 (at \SI{2.2}{\momentum} beam momentum,\SI{120}{\keV} corresponds to \SI{10}{\mm}).
 This process is also shown in Fig.\ref{fig:target_density_determination}.
+
+\par
+\medskip
 Two independent methods are used to deduce the position distribution of the density profile.
 The first method is based on the strip position in the ideal geometry model.
 This method gives density distribution in the laboratory reference frame.
@@ -139,23 +150,8 @@ The elastic energy peak corresponds to the target density center.
 Thus, the energy difference can be converted to a position relative to the target center. 
 This method gives the density distribution in the reference frame where the
 target center is at the origin.
-However, it is limited by the requirement of the coverage of the elastic peak and only gives first half of the density distribution.
-The comparison between the results from the two methods can be used to align the the recoil detector to the target center.
-
-
-% The event count in the same energy bin close to the lower edge of the forward
-% fully-covered region is selected as the reference for the density determination.
-% Fig. \ref{fig:spectrums} shows the elastic energy spectrums recorded by different strips of Si1 at beam momentum \SI{2.2}{\momentum}.
-% Due to the full coverage, the event counts in the energy bin close to the lower edge (for example
-% \SI{120}{\keV}) acts as the meter of the target density at the position
-% corresponding to this energy bin.
-% Since strips are located along the beam axis, both before and after the target
-% chamber center, the aggregation of the measurements on all the strips provide a full scan of the target denstiy profile along the beam axis.
-% The strips are organized into two groups in Fig. \ref{fig:spectrums}: 1) the
-% target peak density is not covered by the strips
-% before Si1\_18 and they measures the target profile before the peak density; 2) the target
-% peak gradually shows up on strips after Si1\_18 and they measures the profile
-% after the peak density.
+However, it is limited by the requirement of the coverage of the target center and only gives first half of the density distribution.
+The comparison between the results from the two methods is used to align the the recoil detector to the target center.
 
 %%%%% Results of the method
 \begin{figure}[htbp]
@@ -163,7 +159,8 @@ The comparison between the results from the two methods can be used to align the
 	\includegraphics[width=0.35\textwidth]{./target_density_result.png}
   \caption{Target density profile measured at \SI{2.2}{\momentum}. The black
     data points are from the first method, the red data points are from the
-    second method. They are aligned with each other with an offset of \SI{1.8}{\mm}.}
+    second method. They are aligned with each other after \SI{1.8}{\mm} shift of
+    the recoil sensors along beam axis.}
   \label{fig:target_density_result}
 \end{figure}
 
@@ -175,15 +172,15 @@ Fig. \ref{fig:target_density_result} shows the target density profile measured a
 \SI{2.2}{\momentum}.
 The distribution is almost symmetric with respect to the target center.
 The main target body lies above a wide spread of residual gas distribution.
-The main body of the target can be described by a double-gaussian model, with
+The main body can be described by a double-gaussian model, with
 \SI{43}{\percent} and \SI{57}{\percent} contribution from the narrow and wide
 component respectively.
 The narrow component has a $\sigma$ of \SI{2}{mm} and the wide one has a $\sigma$ of \SI{5.6}{mm}.
-The overall FWHM of the target distribution is about \SI{6.9}{mm}.
+The overall FWHM of the target profile is about \SI{6.9}{mm}.
 The residual gas has a relatively uniform distribution over a wide region, even
 beyond the recoil sensor's coverage.
 The density of the residual gas is about 260 lower than the peak value of the
-main target body, which proves the sensibility of this method (in comparison, the traditional
+main body, which proves the sensibility of this method (in comparison, the traditional
 method using a rod probe of \SI{1}{\mm} diameter only has a sensibility of about
 \SI{30}).
 
