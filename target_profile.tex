@@ -28,7 +28,7 @@
 \frenchspacing
 
 \title{{\bf
-    Determination of the cluster target density profile in KOALA
+    Determination of the Cluster Target Density Profile in KOALA
 }}
 \author{Yong Zhou
 }
@@ -38,33 +38,35 @@
 %%%% Background, problem description, topic and results of this report
 KOALA aims to measure the differential cross section of (anti)proton-proton elastic
 scattering over a wide $|t|$ range from \SIrange{0.0008}{0.1}{\tmom}.
-In the initial setup, in which only the recoil detector is commissioned, the high yield of low-energy
-background detererioates the elastic peak identification at small recoil angles and limits the lower measurement range of KOALA.
-The forward detector, which is made from fast scintillators, has been built and
-commissioned in 2019 to help supressing the low energy background based on TOF-E
+In the initial setup, in which only the recoil detector was in operation, the high yield of low-energy
+background deteriorates the elastic peak identification at small recoil angles and limits the lower measurement range of KOALA.
+The forward detector, which consists of fast scintillators, has been
+commissioned in 2019 to help suppress the low energy background based on the TOF-E
 relation of the recoil protons.
-The design of the forward detector has been veried in the following test runs and energy spectrums from pure elastic scattering events can now be obtained after the TOF-E selection.
-Due to the lower limit of the acceptance of the forward detector, the spectrums
-of strips at very small recoil angles start to lose some events from the
-target body beyond a threshold angle.
+The design of the forward detector has been verified in the following test runs and energy spectra from pure elastic scattering events can now be obtained after the TOF-E selection.
+Due to the lower limit of the acceptance of the forward detector, the spectra
+of strips at very small recoil angles start to lose events from the
+target volume beyond a threshold angle.
 However, it is found that this phenomenon appears at a larger recoil angle than the design goal.
-This is caused by the unexpected large thickness of the cluster target along the beam axis.
-Thus, it's important to get more accurate information about the target profile.
+% This may be caused by the large thickness of the cluster target along the beam axis.
+More accurate information about the target profile is needed to clarify this phenomenon.
 In this report, a new method of determining the density profile of the cluster
 target in KOALA is described, and the result from the 2019 beam test is presented.
-The implication of measured target profile on the lower limit of KOALA measurement range is also discussed.
+Implications of the measured target profile on the lower limit of KOALA measurement range is also discussed.
 
 \begin{figure*}[b]
   \centering
-	\includegraphics[width=0.85\textwidth]{./target_density_determination.png}
-  \caption{Variation of elastic energy spectrums measured by three strips at different recoil angles: (1) the full target body is within the acceptance of the
-  forward detector; (2) part of the target body is not within the
-  acceptance, but target center is still covered; (3) the target center is out of the
-  acceptance, only the tail of the target profile is recorded. The first row
-  shows the target profile shape and the second row shows the energy
-  spectrum. The blue bar indicates the region covered by
-  the forward detector and the red dot indicates the reference energy bin and
-  its corresponding position in the target profile.}
+	\includegraphics[width=0.8\textwidth]{./target_density_determination.png}
+  \caption{Elastic energy spectra measured by three strips at different recoil
+    angles: (1) the full target volume is within the Forward Detector acceptance; (2) part of the target volume is not within the
+  acceptance, but the center of the target volumn is still whitin the
+  acceptance; (3) the target center is outside of the acceptance, only the tail
+  of the target profile is recorded. The first row shows the target profile
+  shape and the second row shows the energy spectrum.
+  % The blue bar indicates the
+  % region along the beam axis that is in the joint acceptance of the given strip
+  % in the recoil detector and the forward detector.
+  The red dot indicates the reference energy bin and its corresponding position in the target profile.}
   \label{fig:target_density_determination}
 \end{figure*}
 
@@ -72,18 +74,23 @@ The implication of measured target profile on the lower limit of KOALA measureme
 \medskip
 
 %%%%% Description of the method
-The target thickness can be ignored at large recoil angles, since the strips are
-far away from the interaction point.
-This assumption does not hold for strips located close to the interaction point.
 Three scenerios are depicted in Fig. \ref{fig:target_density_determination} to
-show the variation of the measured energy spectrums with respect to smaller
-recoil angles.
-The acceptance of the forward detector covers the fully target body in the
-beginning (Fig. \ref{fig:target_density_determination} (1)), it gradually losts part of the target body
-(Fig. \ref{fig:target_density_determination} (2)), then the peak, and finally only covers
-the tail of the target body (Fig. \ref{fig:target_density_determination} (3)).
-In the end, it losts the target body completely and only measures the residual
-gas contribution.
+show the variation of the TOF-E selected energy spectra from strips at descreasing recoil angles.
+The acceptance of the forward detector are represented by the recoil angle as
+$[\alpha_{min}, \alpha_{max}]$, which in turn can be converted to a region
+before the strip as indicated by blue bars in Fig. \ref{fig:target_density_determination}.
+Elastic scattering events from this region will hit both the recoil detector and the
+forward detector and generate coincidences.
+% The length of the region are roughly the same for different strips, since the interaction point is far away (\SI{4.6}{\m}) from the interaction point.
+% The change of $\alpha_{min}$ and $\alpha_{max}$ is very small for different
+% positions along the beam axis, since the interaction point is far way (\SI{4.6}{\m}) from the interaction point.
+Starting from a strip which covers the full target volume (Fig.
+\ref{fig:target_density_determination} (1)), part of the target volume gradually
+fall out of the acceptance region as approaching to the interaction point (Fig.
+\ref{fig:target_density_determination} (2)), then the peak, and finally only the
+tail of the target is covered (Fig. \ref{fig:target_density_determination} (3)).
+Strips that are further upstream no longer have a coincidence with the forward detector for events in the beam-target overlap volume.
+Instead only events occuring in the rest-gas within the beam pipe generate coincidences.
 
 \par
 \medskip
@@ -109,20 +116,21 @@ The estimated width of the beam profile of COSY is about \SI{7}{\mm}.
 Since each strip corresponds to a specific recoil angle which in turn
 can be converted to an energy value, this indicates that the elastic events with
 energy near the edge the TOF-E selected energy spectrum are guaranteed to be
-fully covered and have $\epsilon_{acceptance} = 1$.
-Thus, the event counts in these bins are used directly as the relative measurement of the target density.
+fully covered and have $\epsilon_{acceptance} \approx 1$.
+Thus, the number of events in these energy bins provides a direct measurement of the target density.
 \begin{figure}[htb!]
   \centering
 	\includegraphics[width=0.5\textwidth]{./fwd_acceptance.png}
-  \caption{Acceptance of the forward detector from the simulation using a square
-    beam with \SI{10}{\mm} width. The blue blocks are the hit map on the forward
-    detector plane for events hitting the recoil sensors. The red square indicates
-    the size of the forward scintillators.}
+  \caption{
+    Hit positions of the forward scattered particle on a plane at
+    $z=\SI{4.6}{\m}$ that are coincident with a recoil particle hitting one of
+    the four recoil sensors. The beam is assumed to have a width of \SI{10}{\mm}.
+     The red square indicates the size of the forward scintillators.}
   \label{fig:fwd_acceptance}
 \end{figure}
 
-For \SI{2.2}{\momentum} run data, the observed lower limit of the forward
-acceptance is about \SI{100}{\keV}, as shown in Fig. \ref{fig:spectrums}.
+The observed lower limit of the forward acceptance is about \SI{100}{\keV} for
+the data collected with $P_{beam} = \SI{2.2}{\GeV}$, as shown in Fig. \ref{fig:spectrums}.
 The value is consistent with the calculated range of the forward detector's
 acceptance with ideal beam condition, which is from \SIrange{0.096}{1.56}{\MeV}.
 Thus, \SI{120}{keV} with bin width of \SI{10}{\keV} is selected at the
@@ -130,14 +138,13 @@ measurement reference.
 \begin{figure}[htb!]
   \centering
 	\includegraphics[width=0.4\textwidth]{./spectrums.png}
-  \caption{A collection of spectrums from strips which only cover the tail of
-    the target body. The lower limit can be clearly identified.}
+  \caption{TOF-E selected energy spectra from several strips that only cover the tail of the target volume. The lower limit can be clearly identified.}
   \label{fig:spectrums}
 \end{figure}
-The target density distribution along the beam axis is obtained by recording the event counts of the same energy bin in all strips.
-The reference energy is converted back to a position before the strip center
-(at \SI{2.2}{\momentum} beam momentum,\SI{120}{\keV} corresponds to \SI{10}{\mm}).
-This process is also shown in Fig.\ref{fig:target_density_determination}.
+The target density distribution along the beam axis is obtained by recording the
+number of events at a given energy bin in all strips.
+The reference energy is then converted back to a position before the strip center
+(at \SI{2.2}{\momentum} beam momentum, \SI{120}{\keV} corresponds to $z=\SI{10}{\mm}$).
 
 \par
 \medskip
@@ -150,19 +157,18 @@ The elastic energy peak corresponds to the target density center.
 Thus, the energy difference can be converted to a position relative to the target center. 
 This method gives the density distribution in the reference frame where the
 target center is at the origin.
-However, it is limited by the requirement of the coverage of the target center and only gives first half of the density distribution.
-The comparison between the results from the two methods is used to align the the recoil detector to the target center.
-
-%%%%% Results of the method
-\begin{figure}[htbp]
+However, it is limited by the requirement of the coverage of the target center
+and only gives the first half of the density distribution.
+\begin{figure}[t!]
   \centering
 	\includegraphics[width=0.35\textwidth]{./target_density_result.png}
   \caption{Target density profile measured at \SI{2.2}{\momentum}. The black
     data points are from the first method, the red data points are from the
-    second method. They are aligned with each other after \SI{1.8}{\mm} shift of
-    the recoil sensors along beam axis.}
+    second method. They are aligned with each other after a \SI{1.8}{\mm} shift of
+    the recoil sensors along the beam axis.}
   \label{fig:target_density_result}
 \end{figure}
+The comparison between the results from the two methods is used to align the the recoil detector to the target center.
 
 \par
 \medskip
@@ -171,8 +177,8 @@ The comparison between the results from the two methods is used to align the the
 Fig. \ref{fig:target_density_result} shows the target density profile measured at
 \SI{2.2}{\momentum}.
 The distribution is almost symmetric with respect to the target center.
-The main target body lies above a wide spread of residual gas distribution.
-The main body can be described by a double-gaussian model, with
+The main target volume lies above a wide spread of residual gas distribution.
+The main volume can be described by a double-gaussian model, with
 \SI{43}{\percent} and \SI{57}{\percent} contribution from the narrow and wide
 component respectively.
 The narrow component has a $\sigma$ of \SI{2}{mm} and the wide one has a $\sigma$ of \SI{5.6}{mm}.
@@ -180,9 +186,7 @@ The overall FWHM of the target profile is about \SI{6.9}{mm}.
 The residual gas has a relatively uniform distribution over a wide region, even
 beyond the recoil sensor's coverage.
 The density of the residual gas is about 260 lower than the peak value of the
-main body, which proves the sensibility of this method (in comparison, the traditional
-method using a rod probe of \SI{1}{\mm} diameter only has a sensibility of about
-\SI{30}).
+main volume.
 
 \par
 \medskip
@@ -191,21 +195,21 @@ The measured target density distribution is much wider than the required design 
 of \SI{2}{\mm} FWHM.
 Correspondingly, the applibiltiy of the TOF-E selection method reaches its lower
 limit at larger recoil angle than the design goal as well.
-At \SI{2.2}{\momentum} beam momentum, the target body is not fully covered by
+At \SI{2.2}{\momentum} beam momentum, the target volume is not fully covered by
 the forward detector starting from the strip Si1\_26.
 This corresponds to the recoil energy of \SI{500}{\keV} and $|t| = \SI{0.001}{\tmom}$.
-The background substraction method using the background model from strips which
+The background subtraction method using the background model from strips which
 are fully covered by the forward detector can extend the lower limit to $|t| = \SI{0.0008}{\tmom}$.
 However, this method has larger systematic error than the TOF-E selection method.
-Finally, to reach even lower $|t|$ range, new method needs to be developped to unfold the
-actual event number from the partially-recorded energy spectrum.
+Finally, to reach even lower $|t|$, new method needs to be developed to unfold the
+actual event rate from the partially-recorded energy spectrum.
 
 \par
 \medskip
 
 %----------------------------------------------------------------
 \begin{thebibliography}{99}
-\bibitem{r1} Y. Zhou, Extraction of elastic scattering events in KOALA, IKP Annual Report 2021
+\bibitem{r1} Y. Zhou, Extraction of elastic scattering events in KOALA, IKP Annual Report 2021.
 \end{thebibliography}
 \end{document}
 
