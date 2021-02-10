@@ -117,8 +117,7 @@ Since each strip corresponds to a specific recoil angle which in turn
 can be converted to an energy value, this indicates that the elastic events with
 energy near the edge the TOF-E selected energy spectrum are guaranteed to be
 fully covered and have $\epsilon_{acceptance} \approx 1$.
-Thus, the number of events in these energy bins provides a direct measurement of the target density.
-\begin{figure}[htb!]
+\begin{figure}[t!]
   \centering
 	\includegraphics[width=0.5\textwidth]{./fwd_acceptance.png}
   \caption{
@@ -128,34 +127,35 @@ Thus, the number of events in these energy bins provides a direct measurement of
      The red square indicates the size of the forward scintillators.}
   \label{fig:fwd_acceptance}
 \end{figure}
+Thus, the number of events in these energy bins provides a direct measurement of the target density.
 
 The observed lower limit of the forward acceptance is about \SI{100}{\keV} for
 the data collected with $P_{beam} = \SI{2.2}{\GeV}$, as shown in Fig. \ref{fig:spectrums}.
 The value is consistent with the calculated range of the forward detector's
 acceptance with ideal beam condition, which is from \SIrange{0.096}{1.56}{\MeV}.
-Thus, \SI{120}{keV} with bin width of \SI{10}{\keV} is selected at the
+Thus, \SI{120}{keV} with bin width of \SI{10}{\keV} is selected as the
 measurement reference.
-\begin{figure}[htb!]
+The target density distribution along the beam axis is obtained by recording the
+number of events at a given energy bin in all strips.
+The reference energy is then converted back to a position before the strip center
+(at \SI{2.2}{\momentum} beam momentum, \SI{120}{\keV} corresponds to $z=\SI{10}{\mm}$).
+\par
+\medskip
+
+Two independent methods are used to deduce the position distribution of the density profile.
+The first method is based on the strip position in the ideal geometry model.
+This method gives the distribution in the laboratory reference frame.
+The second method is based on the energy difference of the reference energy and
+the peak energy.
+\begin{figure}[b!]
   \centering
 	\includegraphics[width=0.4\textwidth]{./spectrums.png}
   \caption{TOF-E selected energy spectra from several strips that only cover the tail of the target volume. The lower limit can be clearly identified.}
   \label{fig:spectrums}
 \end{figure}
-The target density distribution along the beam axis is obtained by recording the
-number of events at a given energy bin in all strips.
-The reference energy is then converted back to a position before the strip center
-(at \SI{2.2}{\momentum} beam momentum, \SI{120}{\keV} corresponds to $z=\SI{10}{\mm}$).
-
-\par
-\medskip
-Two independent methods are used to deduce the position distribution of the density profile.
-The first method is based on the strip position in the ideal geometry model.
-This method gives density distribution in the laboratory reference frame.
-The second method is based on the energy difference of the reference energy and
-the peak energy.
 The elastic energy peak corresponds to the target density center.
 Thus, the energy difference can be converted to a position relative to the target center. 
-This method gives the density distribution in the reference frame where the
+This method gives the distribution in the reference frame where the
 target center is at the origin.
 However, it is limited by the requirement of the coverage of the target center
 and only gives the first half of the density distribution.
@@ -168,7 +168,7 @@ and only gives the first half of the density distribution.
     the recoil sensors along the beam axis.}
   \label{fig:target_density_result}
 \end{figure}
-The comparison between the results from the two methods is used to align the the recoil detector to the target center.
+The comparison between the results from the two methods can be used to align the the recoil detector to the target center.
 
 \par
 \medskip
@@ -195,11 +195,11 @@ The measured target density distribution is much wider than the required design 
 of \SI{2}{\mm} FWHM.
 Correspondingly, the applibiltiy of the TOF-E selection method reaches its lower
 limit at larger recoil angle than the design goal as well.
-At \SI{2.2}{\momentum} beam momentum, the target volume is not fully covered by
+At $P_{beam}=\SI{2.2}{\momentum}$, the target volume is not fully covered by
 the forward detector starting from the strip Si1\_26.
-This corresponds to the recoil energy of \SI{500}{\keV} and $|t| = \SI{0.001}{\tmom}$.
+This corresponds to the recoil energy of \SI{500}{\keV} and $|t| \approx \SI{0.001}{\tmom}$.
 The background subtraction method using the background model from strips which
-are fully covered by the forward detector can extend the lower limit to $|t| = \SI{0.0008}{\tmom}$.
+are fully covered by the forward detector can extend the lower limit to $|t| \approx \SI{0.0006}{\tmom}$.
 However, this method has larger systematic error than the TOF-E selection method.
 Finally, to reach even lower $|t|$, new method needs to be developed to unfold the
 actual event rate from the partially-recorded energy spectrum.
