@@ -88,7 +88,7 @@ The energy spectrums from three strips at different recoil angles are shown in
 Fig. \ref{fig:coulomb_cb2_fit},  before and after the TOF-E selection.
 The only remaining background after this selection comes from the elastic scattering of the residual gas in the beam pipe.
 The shape of this background is described well by the Coulomb elastic scattering cross
-section, due to the uniform distribution of the residual gas and the rapid decreasing of
+section, due to the uniform distribution of the residual gas \cite{r2} and the rapid decreasing of
 the elastic scattering cross section beyond Coulomb region.
 Thus, the extraction of the elastic events from the target body is carried out
 using the combined fit of a Coulomb elastic scattering formula and the crystal-ball
@@ -127,10 +127,10 @@ An example of the fit result for the same channel in Fig. \ref{fig:coulomb_cb2_f
 (c) is shown in Fig. \ref{fig:bkg_vs_tofe}, in which the fitted background component is substracted. 
 Comparing to the TOF-E selected elastic peak, the full elastic peak can now be extracted.
 This method can be applied on all strips on Si1/Si2.
-However, the systematic error becomes larger for strips located far away from
-the strips which are used for the extraction of the background model.
+However, the systematic error becomes larger for strips located at very small
+recoil angle and far away from the strips which are used for the extraction of the background model.
 \begin{figure}[!htb]
-	\includegraphics[width=0.45\textwidth]{./bkg_vs_tofe.png}
+	\includegraphics[width=0.4\textwidth]{./bkg_vs_tofe.png}
   \caption{Comparison of the elastic peak extracted using method 3 and the TOF-E
     selected elastic peak using method 2.}
   \label{fig:bkg_vs_tofe}
@@ -148,12 +148,12 @@ for the comparison between method 1 and 3.
 The results are summarized in Fig. \ref{fig:extraction_consistence}.
 The difference of the extracted event number are all smaller than \SI{0.6}{\percent},
 showing excellent consitency of the three methods.
-The large discrepancy at low and high recoil energies between method 2 and
+The increasing discrepancy at low and high recoil energies between method 2 and
 method 3 on Fig. \ref{fig:extraction_consistence} (a) is due to the limited
-acceptance of the forward detector, which is whithin expectation.
+acceptance of the forward detector, as explained in the previous paragraph.
 The fully-covered strips on Si1 and Si2 can also be identified based on this comparison.
 \begin{figure}[!htb]
-	\includegraphics[width=0.45\textwidth]{./comparison_methods.png}
+	\includegraphics[width=0.5\textwidth]{./comparison_methods.png}
   \caption{Consistence between different extraction
     methods: a) the ratio of elastic scattering event counts between method 2 and
     method 3, the shading regions showing the fully-covered strips on Si1
@@ -172,7 +172,7 @@ The cystall-ball function is adopted as the reponse function of single recoil st
 elastic scattering events from the target body.
 The three methods differs by processing the background components with different techniques.
 Although these methods are consitent with each other, it's found that they are best suited for
-processing strips located at different recoil angles to achieve the best accuracy
+processing strips located at different recoil angles respectively to achieve the best accuracy
 and smallest error.
 No single method is suitable for processing all recoil strips.
 The extracted elastic event counts from these methods can be used as
@@ -184,6 +184,7 @@ the essential input data set for the determination of the differential cross-sec
 %----------------------------------------------------------------
 \begin{thebibliography}{99}
 \bibitem{r1} J. E. Gaiser, Appendix-F Charmonium Spectroscopy from Radiative Decays of the J/Psi and Psi-Prime, Ph.D. Thesis
+\bibitem{r2} Y. Zhou, Determination of the cluster target density profile in KOALA, IKP Annual Report 2021
 \end{thebibliography}
 \end{document}
 
