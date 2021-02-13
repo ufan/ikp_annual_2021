@@ -46,12 +46,12 @@ relation of the recoil protons.
 The design of the forward detector has been verified in the following test runs and energy spectra from pure elastic scattering events can now be obtained after the TOF-E selection.
 Due to the lower limit of the acceptance of the forward detector, the spectra
 of strips at very small recoil angles start to lose events from the
-target volume beyond a threshold angle.
-However, it is found that this phenomenon appears at a larger recoil angle than the design goal.
+target volume below a threshold angle.
+However, it is found that this phenomenon already appears at a larger recoil angle than the design goal.
 % This may be caused by the large thickness of the cluster target along the beam axis.
 More accurate information about the target profile is needed to clarify this phenomenon.
 In this report, a new method of determining the density profile of the cluster
-target in KOALA is described, and the result from the 2019 beam test is presented.
+target is described, and the result from the 2019 test is presented.
 Implications of the measured target profile on the lower limit of KOALA measurement range is also discussed.
 
 \begin{figure*}[b]
@@ -98,7 +98,7 @@ Instead only events occuring in the rest-gas within the beam pipe generate coinc
 The number of TOF-E selected elastic scattering events $N_{elastic}$ recorded on a single recoil strip has the
 following relation with other experiment parameters,
 \begin{equation}
-  N_{elastic} = \epsilon_{DAQ}\cdot l_{beam}\cdot\rho_{target}\cdot\sigma_{elastic}\cdot\epsilon_{acceptance}
+  N_{elastic} = \epsilon_{DAQ}\cdot l_{beam}\cdot\rho_{target}\cdot\sigma_{elastic}\cdot\epsilon_{acceptance}.
 \end{equation}
 where $\epsilon_{DAQ}$ is the DAQ efficiency, $l_{beam}$ is the beam intensity, $\rho_{target}$ is the target density,
 $\sigma_{elastic}$ is the cross section of elastic scattering and
@@ -177,31 +177,30 @@ The comparison between the results from the two methods can be used to align the
 Fig. \ref{fig:target_density_result} shows the target density profile measured at
 \SI{2.2}{\momentum}.
 The distribution is almost symmetric with respect to the target center.
-The main target volume lies above a wide spread of residual gas distribution.
+The main target volume lies above a wide spread of residual gas.
 The main volume can be described by a double-gaussian model, with
 \SI{43}{\percent} and \SI{57}{\percent} contribution from the narrow and wide
-component respectively.
-The narrow component has a $\sigma$ of \SI{2}{mm} and the wide one has a $\sigma$ of \SI{5.6}{mm}.
+component, respectively.
+The narrow component has $\sigma = \SI{2}{\mm}$ and the wide one has $\sigma = \SI{5.6}{\mm}$.
 The overall FWHM of the target profile is about \SI{6.9}{mm}.
 The residual gas has a relatively uniform distribution over a wide region, even
 beyond the recoil sensor's coverage.
-The density of the residual gas is about 260 lower than the peak value of the
-main volume.
+The density of the residual gas is about a factor 260 lower than the peak density of the target.
 
 \par
 \medskip
 
-The measured target density distribution is much wider than the required design value
-of \SI{2}{\mm} FWHM.
-Correspondingly, the applibiltiy of the TOF-E selection method reaches its lower
-limit at larger recoil angle than the design goal as well.
+The measured target density distribution is much wider than the design value of \SI{2}{\mm} FWHM.
+However, the deduced density is an integrated value over the X-Y plane, thus
+may be afftected by the finite angular dispersion of the beam.
+Correspondingly, the TOF-E selection method reaches its lower limit at larger recoil angle than the design goal.
 At $P_{beam}=\SI{2.2}{\momentum}$, the target volume is not fully covered by
 the forward detector starting from the strip Si1\_26.
 This corresponds to the recoil energy of \SI{500}{\keV} and $|t| \approx \SI{0.001}{\tmom}$.
 The background subtraction method using the background model from strips which
 are fully covered by the forward detector can extend the lower limit to $|t| \approx \SI{0.0006}{\tmom}$.
 However, this method has larger systematic error than the TOF-E selection method.
-Finally, to reach even lower $|t|$, new method needs to be developed to unfold the
+Finally, to reach even lower $|t|$, new methods need to be developed to unfold the
 actual event rate from the partially-recorded energy spectrum.
 
 \par
